@@ -77,8 +77,8 @@ def binary_search(da_array: list, needle, left:int=0, right:int=-1) -> int:
     else:
         rangemax=right
     
-    if rangemax == rangemin:
-        return rangemax if da_array[rangemax] == needle else -1
+    if  rangemin == rangemax:
+        return rangemin if da_array[rangemin] == needle else -1
     
     for i in range(rangemin, rangemax):
         try:
