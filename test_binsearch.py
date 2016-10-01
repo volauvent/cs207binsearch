@@ -9,7 +9,7 @@ def test_bad_input_results():
         binary_search([(1,2),3,4,5], 2)
     with raises(ValueError):
         binary_search([5,4,3,2,1], 2)
-    with raises(ValueError):
+    with raises(TypeError):
         binary_search([1,2,3,4,5], 2, 0.5, 1.4)
     with raises(ValueError):
         binary_search([1,2,3,4,5], 2, 1, 100)
