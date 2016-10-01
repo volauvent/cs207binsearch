@@ -28,8 +28,6 @@ def test_right_input_results():
     assert binary_search([1,2,3,np.inf], np.inf) == 3
     assert binary_search([1], 1) == 0
     assert binary_search([1], 2) == -1
-    assert binary_search([1,2,3,4,5], 2, -4, 3) == 1
-
 
 def test_non_num_input_results():
     assert binary_search(['a','b','c'],'b') == 1
