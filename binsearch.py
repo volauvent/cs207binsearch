@@ -79,10 +79,10 @@ def binary_search(da_array: list, needle, left:int=0, right:int=-1) -> int:
     
     for i in range(rangemin, rangemax):
         try:
-            test = da_arry[i] > da_array[i + 1]
+            cmp = da_array[i] > da_array[i + 1]
         except:
-            raise TypeError('Array contains ill items!')
-        if da_arry[i] > da_array[i + 1]:
+            raise TypeError('Array contains uncompared items!')
+        if da_array[i] > da_array[i + 1]:
             raise ValueError('Array must be in increasing order!')
     
     while True:
