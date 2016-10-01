@@ -63,6 +63,11 @@ def binary_search(da_array: list, needle, left:int=0, right:int=-1) -> int:
     >>> binary_search(input, 5, 2, 2)
     -1
     """
+    if da_array is None:
+        return -1
+    if type(left) != int or type(right) != int:
+        raise TypeError('Left and right must be integers!')
+        
     if left==0:
         rangemin = 0
     else:
@@ -71,6 +76,15 @@ def binary_search(da_array: list, needle, left:int=0, right:int=-1) -> int:
         rangemax=len(da_array) - 1
     else:
         rangemax=right
+    
+    for i in range(rangemin, rangemax):
+        try:
+            test = da_arry[i] > da_array[i + 1]
+        except:
+            raise TypeError('Array contains ill items!')
+        if da_arry[i] > da_array[i + 1]:
+            raise ValueError('Array must be in increasing order!')
+    
     while True:
         "needle in da_array => needle in da_array[rangemin:rangemax]"   
         if rangemin > rangemax:
